@@ -1,0 +1,272 @@
+/* 🌸 Base Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+.nav-links a {
+  margin: 0 0.8rem;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #d81b60;
+}
+
+/* ✨ Animated Gradient Logo */
+.logo {
+  position: relative;
+  font-weight: 700;
+  background: linear-gradient(90deg, #d81b60, #ec407a, #f06292);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s linear infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* 🌈 Section Styling */
+.section {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #fff, #fce4ec);
+}
+
+.section:nth-child(even) {
+  background: linear-gradient(180deg, #e0f7fa, #fff);
+}
+
+h2 {
+  color: #d81b60;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+/* 🔥 Animated Underline on Section Titles */
+.section h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #d81b60;
+  transition: width 0.5s ease;
+}
+
+.section h2:hover::after {
+  width: 100%;
+}
+
+/* 💾 Download Button */
+.download-btn {
+  background: #d81b60;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.download-btn:hover {
+  background: #ad1457;
+  transform: scale(1.05);
+}
+
+/* 💻 Skills, Lists */
+.skills-list,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: left;
+}
+
+.skills-list li,
+ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* 💫 Card Lift Effect for Experience/Projects */
+.section .content h3,
+.section .content ul li,
+.section .content p {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section .content h3:hover,
+.section .content ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌸 Old Gallery (kept for backup) */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* 🎀 Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #d81b60;
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+}
+
+/* 🧩 General Layout */
+.aligned-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.resume-bottom {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+/* 📞 Contact Section */
+.contact-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-row a {
+  text-decoration: none;
+  color: #d81b60;
+  font-weight: 500;
+}
+
+/* 🌈 Gradient Animation (Hero Background) */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 💫 Featured Highlights (Gallery Replacement) */
+.highlights-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.highlight-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, #fff, #fce4ec);
+  border-radius: 18px;
+  padding: 1rem 1.5rem;
+  max-width: 750px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.highlight-info {
+  max-width: 450px;
+  text-align: left;
+}
+
+.highlight-info h3 {
+  color: #d81b60;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.highlight-info p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .highlight-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .highlight-info {
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    margin: 0.5rem;
+  }
+}
