@@ -91,7 +91,7 @@ useEffect(() => {
       </Section>
 
       {/* 💻 Skills */}
-      <Section id="skills" title="Technical Skills">
+      <Section id="skills" title="Skills">
         <ul className="skills-list">
           <li><b>SAP ABAP:</b> ALV Reports, Function Modules, Modularization, SQL Joins, Internal Tables, CDS Views, OData, Adobe Forms, Debugging, Performance Optimization</li>
           <li><b>Programming:</b> Python, C, C++, Java</li>
