@@ -163,8 +163,8 @@ useEffect(() => {
 
     {/* 1️⃣ Certificate */}
     <motion.div className="highlight-card" whileHover={{ scale: 1.02 }}>
-      <a href="/src/assets/certificate.jpg" target="_blank">
-        <img src="/src/assets/certificate.jpg" alt="SAP Certificate" />
+      <a href="/certificate.jpg" target="_blank">
+        <img src="/certificate.jpg" alt="SAP Certificate" />
       </a>
       <div className="highlight-info">
         <h3>SAP Certification</h3>
@@ -174,8 +174,8 @@ useEffect(() => {
 
     {/* 2️⃣ Internship Offer Letter */}
     <motion.div className="highlight-card" whileHover={{ scale: 1.02 }}>
-      <a href="/src/assets/offer_letter.jpg" target="_blank">
-        <img src="/src/assets/offer_letter.jpg" alt="Internship Offer Letter" />
+      <a href="/offer_letter.jpg" target="_blank">
+        <img src="/offer_letter.jpg" alt="Internship Offer Letter" />
       </a>
       <div className="highlight-info">
         <h3>Internship Offer Letter (Front-End Developer)</h3>
@@ -185,8 +185,8 @@ useEffect(() => {
 
     {/* 3️⃣ TEDx */}
     <motion.div className="highlight-card" whileHover={{ scale: 1.02 }}>
-      <a href="/src/assets/tedx.jpg" target="_blank">
-        <img src="/src/assets/tedx.jpg" alt="TEDxSFIT 2025" />
+      <a href="/tedx.jpg" target="_blank">
+        <img src="/tedx.jpg" alt="TEDxSFIT 2025" />
       </a>
       <div className="highlight-info">
         <h3>TEDxSFIT 2025</h3>
@@ -196,8 +196,8 @@ useEffect(() => {
 
     {/* 4️⃣ Trek */}
     <motion.div className="highlight-card" whileHover={{ scale: 1.02 }}>
-      <a href="/src/assets/trek.jpg" target="_blank">
-        <img src="/src/assets/trek.jpg" alt="Trek Leader" />
+      <a href="/trek.jpg" target="_blank">
+        <img src="/trek.jpg" alt="Trek Leader" />
       </a>
       <div className="highlight-info">
         <h3>Adventure Enthusiast</h3>
@@ -207,8 +207,8 @@ useEffect(() => {
 
     {/* 5️⃣ Music */}
     <motion.div className="highlight-card" whileHover={{ scale: 1.02 }}>
-      <a href="/src/assets/trinity.jpg" target="_blank">
-        <img src="/src/assets/trinity.jpg" alt="Guitar Certification" />
+      <a href="/trinity.jpg" target="_blank">
+        <img src="/trinity.jpg" alt="Guitar Certification" />
       </a>
       <div className="highlight-info">
         <h3>Music & Guitar</h3>
@@ -224,7 +224,7 @@ useEffect(() => {
       {/* 📄 Download Resume */}
       <div className="resume-bottom">
         <a
-          href="/src/assets/JASMEETA_RESUME_2025.pdf"
+          href="/JASMEETA_RESUME_2025.pdf"
           download="Jasmeeta_Sardesai_Resume.pdf"
           className="download-btn"
         >
