@@ -269,7 +269,7 @@ useEffect(() => {
 
       {/* 📄 Download Resume */}
       <div className="resume-bottom">
-        <a href="/JASMEETA_RESUME_2025.pdf" download className="download-btn">
+        <a href="/JASMEETA_RESUME_2025 .pdf" download className="download-btn">
           📄 Download Resume
         </a>
 
