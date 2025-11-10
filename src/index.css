@@ -328,8 +328,8 @@ ul li {
     left: auto; 
     width: 35%;
     height: 100vh;
-    background: rgba(255,225,237);
-    backdrop-filter: blur(50px);
+    background: rgba(255,225,237,0.32);
+    backdrop-filter: blur(20px);
     padding: 3rem 1.5rem;
     display: flex;
     flex-direction: column;
