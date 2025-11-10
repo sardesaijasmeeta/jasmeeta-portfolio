@@ -49,10 +49,7 @@ useEffect(() => {
 
       {/* 🌸 Navbar */}
       <nav style={navStyle}>
-        <div className="logo-placeholder"></div>
-
-
-  {/* Desktop navigation items */}
+  {/* Desktop menu */}
   <div className="nav-links desktop-menu">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -66,28 +63,15 @@ useEffect(() => {
     <a href="#contact">Contact</a>
   </div>
 
-  {/* Mobile Menu Icon */}
-  <div className="mobile-menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+  {/* Hamburger menu on mobile */}
+  <div
+    className="mobile-menu-icon"
+    onClick={() => setMenuOpen(!menuOpen)}
+  >
     ☰
   </div>
-
-  {/* Mobile Slide Menu */}
-  <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-
-      <a onClick={() => setMenuOpen(false)} href="#about">About</a>
-      <a onClick={() => setMenuOpen(false)} href="#skills">Skills</a>
-      <a onClick={() => setMenuOpen(false)} href="#certifications">Certifications</a>
-      <a onClick={() => setMenuOpen(false)} href="#experience">Experience</a>
-      <a onClick={() => setMenuOpen(false)} href="#projects">Projects</a>
-      <a onClick={() => setMenuOpen(false)} href="#training">Training</a>
-      <a onClick={() => setMenuOpen(false)} href="#education">Education</a>
-      <a onClick={() => setMenuOpen(false)} href="#extra">Extra</a>
-      <a onClick={() => setMenuOpen(false)} href="#gallery">Highlights</a>
-      <a onClick={() => setMenuOpen(false)} href="#contact">Contact</a>
-    </div>
-  
-
 </nav>
+
 
 
 
