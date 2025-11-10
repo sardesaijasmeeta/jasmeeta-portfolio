@@ -3,8 +3,26 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 
+
+
+
 function App() {
   const [scrollWidth, setScrollWidth] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const navStyle = {
+  position: "fixed",
+  top: 0,
+  width: "100%",
+  zIndex: 9999,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: "1rem 1rem",
+  backgroundColor: "white",
+  boxShadow: "0 2px 6px rgba(0,0,0,0.05)",
+};
+
+
 
 useEffect(() => {
   const handleScroll = () => {
@@ -31,21 +49,45 @@ useEffect(() => {
 
       {/* 🌸 Navbar */}
       <nav style={navStyle}>
-        <h2 className="logo">Jasmeeta Sardesai</h2>
-        <div className="nav-links">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#certifications">Certifications</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#training">Training</a>
-          <a href="#education">Education</a>
-          <a href="#extra">Extra</a>
-          <a href="#gallery">Highlights</a>
 
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
+  {/* Desktop navigation items */}
+  <div className="nav-links desktop-menu">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#training">Training</a>
+    <a href="#education">Education</a>
+    <a href="#extra">Extra</a>
+    <a href="#gallery">Highlights</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  {/* Mobile Menu Icon */}
+  <div className="mobile-menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+    ☰
+  </div>
+
+  {/* Mobile Slide Menu */}
+  {menuOpen && (
+    <div className="mobile-menu">
+      <a onClick={() => setMenuOpen(false)} href="#about">About</a>
+      <a onClick={() => setMenuOpen(false)} href="#skills">Skills</a>
+      <a onClick={() => setMenuOpen(false)} href="#certifications">Certifications</a>
+      <a onClick={() => setMenuOpen(false)} href="#experience">Experience</a>
+      <a onClick={() => setMenuOpen(false)} href="#projects">Projects</a>
+      <a onClick={() => setMenuOpen(false)} href="#training">Training</a>
+      <a onClick={() => setMenuOpen(false)} href="#education">Education</a>
+      <a onClick={() => setMenuOpen(false)} href="#extra">Extra</a>
+      <a onClick={() => setMenuOpen(false)} href="#gallery">Highlights</a>
+      <a onClick={() => setMenuOpen(false)} href="#contact">Contact</a>
+    </div>
+  )}
+
+</nav>
+
+
 
       {/* 🌈 Hero Section */}
       <section style={heroSection}>
@@ -119,12 +161,16 @@ useEffect(() => {
       </Section>
 
       {/* 🧠 Training */}
-      <Section id="training" title="Training" align="centered">
-        <p className="aligned-text">
-          SAP ABAP Training – Feligrat Institute (May 2025 – Jul 2025)  
-          Hands-on training focused on Internal Tables, Modularization, ALV Reports, CDS Views, OData, Adobe Forms, Debugging, and Performance Optimization.
-        </p>
-      </Section>
+     <Section id="training" title="Training" align="centered">
+  <div className="aligned-text">
+    <p><strong>SAP ABAP Training – Feligrat Institute (May 2025 – Jul 2025)</strong></p>
+    <p>
+      Hands-on training focused on Internal Tables, Modularization, ALV Reports, CDS Views, OData,
+      Adobe Forms, Debugging, and Performance Optimization.
+    </p>
+  </div>
+</Section>
+
 
       {/* 🧩 Projects */}
       <Section id="projects" title="Projects">
@@ -223,13 +269,10 @@ useEffect(() => {
 
       {/* 📄 Download Resume */}
       <div className="resume-bottom">
-        <a
-          href="/JASMEETA_RESUME_2025.pdf"
-          download="Jasmeeta_Sardesai_Resume.pdf"
-          className="download-btn"
-        >
-          📄 Download My Resume
+        <a href="/JASMEETA_RESUME_2025.pdf" download className="download-btn">
+          📄 Download Resume
         </a>
+
       </div>
 
       {/* 📞 Contact */}

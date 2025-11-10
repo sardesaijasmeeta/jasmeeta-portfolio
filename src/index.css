@@ -270,3 +270,53 @@ ul li {
     margin: 0.5rem;
   }
 }
+/* hide desktop menu on mobile */
+.desktop-menu {
+  display: flex;
+}
+
+.mobile-menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #d81b60;
+}
+
+/* slide-in mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  background: white;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+  gap: 1.5rem;
+  z-index: 9999;
+}
+
+.mobile-menu a {
+  font-size: 1.35rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 900px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block !important;
+  }
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
