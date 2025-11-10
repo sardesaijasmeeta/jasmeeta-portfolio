@@ -299,3 +299,46 @@ ul li {
   display: flex;
   gap: 2rem;
 }
+/* FIX NAVBAR SPACING WHEN LOGO IS REMOVED */
+.logo-placeholder {
+  width: 120px; /* same size as original logo */
+}
+
+/* HIDE DESKTOP MENU COMPLETELY ON MOBILE */
+@media (max-width: 900px) {
+  .desktop-menu {
+    display: none !important;
+  }
+
+  .mobile-menu-icon {
+    display: block !important;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #d81b60;
+    z-index: 10000;
+  }
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  padding: 2rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+/* when menuOpen === true */
+.mobile-menu.open {
+  transform: translateX(0);
+}

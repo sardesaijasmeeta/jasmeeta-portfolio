@@ -49,6 +49,8 @@ useEffect(() => {
 
       {/* 🌸 Navbar */}
       <nav style={navStyle}>
+        <div className="logo-placeholder"></div>
+
 
   {/* Desktop navigation items */}
   <div className="nav-links desktop-menu">
@@ -70,8 +72,8 @@ useEffect(() => {
   </div>
 
   {/* Mobile Slide Menu */}
-  {menuOpen && (
-    <div className="mobile-menu">
+  <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+
       <a onClick={() => setMenuOpen(false)} href="#about">About</a>
       <a onClick={() => setMenuOpen(false)} href="#skills">Skills</a>
       <a onClick={() => setMenuOpen(false)} href="#certifications">Certifications</a>
