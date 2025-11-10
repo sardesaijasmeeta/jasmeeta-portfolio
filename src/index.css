@@ -20,12 +20,12 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
+  height: 55px;
   background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 1px;
   z-index: 10000;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
@@ -314,9 +314,9 @@ ul li {
   /* Navbar container */
   nav.navbar {
     justify-content: flex-end !important;
-    padding: 0.8rem 1rem;
-    height: 65px;
-    background: #fff;
+    padding: 0rem 1rem;
+    height: 45px;
+    background: #FFE1ED;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   }
 
@@ -325,16 +325,19 @@ ul li {
     position: fixed;
     top: 0;
     right: 0;
-    width: 65%;
+    left: auto; 
+    width: 35%;
     height: 100vh;
-    background: linear-gradient(180deg, #fff, #fce4ec 25%, #f8bbd0 80%);
-    padding: 5rem 1.5rem 2rem;
+    background: rgba(255,225,237);
+    backdrop-filter: blur(50px);
+    padding: 3rem 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
     z-index: 10000;
-    border-radius: 20px 0 0 20px;
-    box-shadow: -6px 0px 18px rgba(0,0,0,0.15);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.15);
     animation: slideIn 0.35s ease forwards;
   }
 
@@ -345,12 +348,31 @@ ul li {
     color: #d81b60;
     text-decoration: none;
     padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(216, 27, 96, 0.1);
+    border-bottom: 1px solid rgba(216, 27, 96, 0.25); /* soft pink line */
   }
-
+  .mobile-menu a:last-child {
+  border-bottom: none; /* remove line after last item */
+}
   /* Keyframe */
   @keyframes slideIn {
     from { transform: translateX(100%); }
     to { transform: translateX(0); }
   }
 }
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.8rem;
+  color: #d81b60;
+  cursor: pointer;
+
+  /* subtle hover effect */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+  color: #ad1457; /* deeper pink */
+}
+

@@ -46,6 +46,8 @@ function App() {
       {/* ✅ Mobile Sidebar */}
       {menuOpen && (
         <div className="mobile-menu">
+          <div className="close-btn" onClick={() => setMenuOpen(false)}>✕</div>
+
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
           <a href="#certifications" onClick={() => setMenuOpen(false)}>Certifications</a>
