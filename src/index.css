@@ -303,5 +303,69 @@ ul li {
 .logo-placeholder {
   width: 120px; /* same size as original logo */
 }
+/* ✅ MOBILE NAV FIX — override everything */
+@media (max-width: 900px) {
+
+  .desktop-menu {
+    display: none !important;
+  }
+
+  .mobile-menu-icon {
+    display: block !important;
+    font-size: 2rem;
+    color: #d81b60;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 10000;
+  }
+
+  nav {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: white;
+    z-index: 9999;
+  }
+}
+/* ✅ MOBILE SLIDE MENU */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  background: white;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  z-index: 10000;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.25);
+  animation: slideIn 0.3s ease forwards;
+}
+
+/* ✅ Slide animation for smooth sidebar motion */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ✅ Mobile menu links */
+.mobile-menu a {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #d81b60; /* your theme color */
+}
 
 
