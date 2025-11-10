@@ -64,26 +64,29 @@ useEffect(() => {
   </div>
 
   {/* Hamburger menu on mobile */}
-  <div
-    className="mobile-menu-icon"
-    onClick={() => setMenuOpen(!menuOpen)}
-  >
-    ☰
-  </div>
-  {menuOpen && (
+  {/* Mobile menu icon */}
+<div className="mobile-menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+  <span className="menu-bar"></span>
+  <span className="menu-bar"></span>
+  <span className="menu-bar"></span>
+</div>
+
+{/* Slide-in mobile menu */}
+{menuOpen && (
   <div className="mobile-menu">
-      <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-      <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
-      <a href="#certifications" onClick={() => setMenuOpen(false)}>Certifications</a>
-      <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
-      <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
-      <a href="#training" onClick={() => setMenuOpen(false)}>Training</a>
-      <a href="#education" onClick={() => setMenuOpen(false)}>Education</a>
-      <a href="#extra" onClick={() => setMenuOpen(false)}>Extra</a>
-      <a href="#gallery" onClick={() => setMenuOpen(false)}>Highlights</a>
-      <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+    <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+    <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
+    <a href="#certifications" onClick={() => setMenuOpen(false)}>Certifications</a>
+    <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
+    <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+    <a href="#training" onClick={() => setMenuOpen(false)}>Training</a>
+    <a href="#education" onClick={() => setMenuOpen(false)}>Education</a>
+    <a href="#extra" onClick={() => setMenuOpen(false)}>Extra</a>
+    <a href="#gallery" onClick={() => setMenuOpen(false)}>Highlights</a>
+    <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
   </div>
 )}
+
 </nav>
 
 
