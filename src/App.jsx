@@ -85,7 +85,7 @@ useEffect(() => {
       <a onClick={() => setMenuOpen(false)} href="#gallery">Highlights</a>
       <a onClick={() => setMenuOpen(false)} href="#contact">Contact</a>
     </div>
-  )}
+  
 
 </nav>
 
